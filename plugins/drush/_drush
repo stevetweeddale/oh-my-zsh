@@ -1,5 +1,8 @@
 #compdef drush
 
+# Ensure drush is available.
+which drush > /dev/null || alias drush &> /dev/null || return
+
 _drush() {
   # The '< /dev/null' is a work around for a bug in php libedit stdin handling.
   # Note that libedit in place of libreadline in some distributions. See:
