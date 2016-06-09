@@ -6,7 +6,7 @@
 # Will return the any currently persistently drush site-alias.
 # You can include it in your prompt with $(drupal_site)
 function drupal_site() {
-  f="${TMPDIR:-/tmp/}/drush-env/drush-drupal-site-$$"
+  f="${TMPDIR:-/tmp/}/drush-env-$USER/drush-drupal-site-$$"
   if [ -f $f ]
   then
     DRUPAL_SITE=$(cat "$f")
